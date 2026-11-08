@@ -1,7 +1,8 @@
 """
 Project:  Taxi Fare Prediction
 Dataset: Kaggle - New York City Taxi Fare Prediction
-Description: This project uses a Kaggle competition dataset to practice machine learning techniques for taxi fare prediction.
+Description:
+This project uses a Kaggle competition dataset to practice machine learning techniques for taxi fare prediction.
 The implementation is based on academic coursework and reference code, with modifications and adjustments made during the learning process.
 """
 
