@@ -1,7 +1,6 @@
 """
 Project: House Price Prediction
 Dataset: Kaggle - House Prices: Advanced Regression Techniques
-
 Description:
 This project uses a Kaggle competition dataset to practice machine learning techniques for house price prediction.
 The implementation is based on academic coursework and reference code, with modifications and adjustments made during the learning process.
