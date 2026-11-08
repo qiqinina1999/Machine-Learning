@@ -1,7 +1,8 @@
 """
 Project: Titanic Survival Prediction
 Dataset: Kaggle - Titanic: Machine Learning from Disaster
-Description: This project uses a Kaggle competition dataset to practicemachine learning techniques for titanic survival prediction.
+Description:
+This project uses a Kaggle competition dataset to practicemachine learning techniques for titanic survival prediction.
 The implementation is based on academic coursework and reference code, with modifications and adjustments made during the learning process.
 """
 
