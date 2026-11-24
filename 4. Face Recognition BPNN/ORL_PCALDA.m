@@ -1,3 +1,5 @@
+%% Reference: PCA-LDA feature extraction: https://www.mathworks.com/matlabcentral/answers/1677684-how-to-perform-template-matching-between-matrix-and-image
+
 function [prototypeFACE, testFACE] = ORL_PCALDA
 
 people = 40;        % Total people for training
@@ -33,7 +35,7 @@ zeromeanTotalFACE=FFACE;
 % zero mean
 for i=1:1:withinsample*people
     for j=1:1:(row)*(col) 
-        zeromeanTotalFACE(i,j)=zeromeanTotalFACE(i,j)-TotalMeanFACE(j); %¥¿³W¤Æ
+        zeromeanTotalFACE(i,j)=zeromeanTotalFACE(i,j)-TotalMeanFACE(j); %Â¥Â¿Â³WÂ¤Ã†
     end
 end
 
