@@ -27,6 +27,14 @@ These projects were developed through academic coursework and independent learni
  • Geographic distance calculation
  
  • Gradient Boosting Regression
+
+ ##4. Face Recognition using Backpropagation Neural Network(BPNN) 
+
+ • Feedforward Neural Network
+ 
+ • Backpropagation Algorithm
+ 
+ • Adaptive Learning Rate
  
 # Topic
 Machine Learning Fundamentals
@@ -44,10 +52,14 @@ Model Performance Evaluation
 # Tools
 Python
 
-NumPy
+• NumPy
 
-Pandas
+• Pandas
 
-Matplotlib
+• Matplotlib
 
-Scikit-learn
+• Scikit-learn
+
+MATLAB
+
+• Neural Network Implementation
