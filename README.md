@@ -52,7 +52,7 @@ Ensemble Learning
 Model Performance Evaluation
 
 # Tools
-Python
+**Python**
 
 • NumPy
 
@@ -62,6 +62,6 @@ Python
 
 • Scikit-learn
 
-MATLAB
+**MATLAB**
 
 • Neural Network Implementation
