@@ -1,3 +1,7 @@
+%% Project: Face Recognition using BPNN
+%% Description: This project implements a backpropagation neural network for face classification using PCA-LDA features.
+%% Reference: PCA-LDA feature extraction: https://www.mathworks.com/matlabcentral/answers/1677684-how-to-perform-template-matching-between-matrix-and-image
+
 function BP_ORL
 
 % input ORL training data after PCALDA, using function 'ORL_PCALDA.m'
@@ -39,36 +43,36 @@ for epoch=1:1:200
 
     for iter=1:1:100 % Number of faces
 
-        % «e¶Ç³¡¤À
+        % å‰å‚³éƒ¨åˆ†
         hiddensigma = input(iter,:)*hiddenmatrix; % hiddensigma = 1x40
         hiddennet = logsig(hiddensigma);       
         outputsigma = hiddennet*outputmatrix; % outputsigma = 1x20
         outputnet = purelin(outputsigma);        
         
-        % ­Ë¶Ç³¡¤À
-        % ¿é¥X¼hªº delta
+        % å€’å‚³éƒ¨åˆ†
+        % è¼¸å‡ºå±¤çš„ delta
         doutputnet = dpurelin(outputsigma);
         deltaoutput = doutputnet.*(target(iter,:)-outputnet);
         error = target(iter,:) - outputnet;
         t = [t;sum(error.^2)];
 
-        % ÁôÂÃ¼hªº delta
+        % éš±è—å±¤çš„ delta
         temp = outputmatrix*deltaoutput';
         transfer = dlogsig(hiddensigma, hiddennet);
         deltahidden = temp.*transfer';
         
-        % ¿é¥X¼hÅv­«§ó·s
+        % è¼¸å‡ºå±¤æ¬Šé‡æ›´æ–°
         newoutputmatrix = outputmatrix + lr*(deltaoutput'*hiddennet)';
         outputmatrix = newoutputmatrix;
         
-        % ÁôÂÃ¼hÅv­«§ó·s 
+        % éš±è—å±¤æ¬Šé‡æ›´æ–° 
         newhiddenmatrix = hiddenmatrix + lr*(deltahidden*input(iter,:))';
         hiddenmatrix=newhiddenmatrix;
     end
     RMSE(epoch) = sqrt(sum(t)/100);
     
     % Update learning rate: 
-    % ¦pªGRMSE¤ñ¤W¦¸¤j,´N§âlearning Rate´î¤p10­¿
+    % å¦‚æžœRMSEæ¯”ä¸Šæ¬¡å¤§,å°±æŠŠlearning Rateæ¸›å°10å€
     if epoch>=2 && RMSE(epoch)>=RMSE(epoch-1)
         lr = lr/10;
     end
