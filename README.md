@@ -29,7 +29,9 @@ These projects were developed through academic coursework and independent learni
  • Gradient Boosting Regression
 
  ##4. Face Recognition using Backpropagation Neural Network(BPNN) 
-
+ 
+ **Main Program: BP_ORL.m**
+ 
  • Feedforward Neural Network
  
  • Backpropagation Algorithm
